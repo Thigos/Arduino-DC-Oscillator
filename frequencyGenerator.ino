@@ -1,6 +1,6 @@
 #define pinoSaida 3
 
-int frequency = 800;
+int frequency = 800; //Max 980 Hz
 int ligado = true;
 
 void setup()
@@ -16,8 +16,6 @@ void setup()
 
 void loop()
 {
-    //digitalWrite(pinoSaida, LOW);
     ligado ? (digitalWrite(pinoSaida, LOW), ligado = false, digitalWrite(4, LOW)) : (digitalWrite(pinoSaida, HIGH), ligado = true, digitalWrite(4, HIGH));
-    //Serial.println(ligado);
-    //delay(1000/frequency);
+    delay(1000/frequency);
 }
